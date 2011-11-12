@@ -1,0 +1,23 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @question.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @question.description %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @question.author %>
+</p>
+
+<p>
+  <b>Public Date:</b>
+  <%= @question.pubdate %>
+</p>
+
+<%= link_to 'Back', question_index_path %>

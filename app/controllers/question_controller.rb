@@ -30,4 +30,13 @@ class QuestionController < ApplicationController
 
     redirect_to (:action => "index")
   end
+
+  def show
+    @question = Question.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @question }
+    end
+  end
 end

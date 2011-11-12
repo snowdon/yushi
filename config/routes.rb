@@ -8,6 +8,7 @@ Yushi::Application.routes.draw do
   put "question/updateing/:id" => "question#updateing"
   put "question/destoring/:id" => "question#destoring"
 
+  get "question/:id" => "question#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
