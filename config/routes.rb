@@ -1,5 +1,13 @@
 Yushi::Application.routes.draw do
+  get "question/newquestion"
   get "question/index"
+  get "question/modify/:id" => "question#modify"
+  get "question/del/:id" => "question#del"
+
+  post"question/create"
+  put "question/updateing/:id" => "question#updateing"
+  put "question/destoring/:id" => "question#destoring"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

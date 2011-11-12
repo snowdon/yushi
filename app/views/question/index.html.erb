@@ -12,8 +12,12 @@
     <td><%= q.description %></td>
     <td><%= q.author %></td>
     <td><%= q.pubdate %></td>
+    <td>
+    <%= link_to "edit", :action=> "modify", :id=> q%>/
+    <%= link_to "del",  :aciton=> "del",    :id=> q%>
+    </td>
   </tr>
 <% end %>
 </table>
-
+<p><%= link_to "add new question", question_newquestion_path %></p>
     
