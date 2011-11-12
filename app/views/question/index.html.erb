@@ -1,0 +1,19 @@
+<h1>Questions</h1>
+<table border="0">
+  <tr>
+    <td>Title></td>
+    <td>Description</td>
+    <td>Author</td>
+    <td>pubdate</td>
+  </tr>
+<% @questions.each do |q| %>
+  <tr>
+    <td><%= q.title %></td>
+    <td><%= q.description %></td>
+    <td><%= q.author %></td>
+    <td><%= q.pubdate %></td>
+  </tr>
+<% end %>
+</table>
+
+    
