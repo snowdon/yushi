@@ -1,0 +1,24 @@
+<h1>Add a new question</h1>
+<%= form_for @question , :url => {:controller => "question", :action => "updateing", :id => @question } do |f| %>
+<div class="field">
+  <%= f.label :title %><br >
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :description%><br >
+  <%= f.text_field :description %>
+</div>
+<div class="field">
+  <%= f.label :author %><br >
+  <%= f.text_field :author %>
+</div>
+<div class="field">
+  <%= f.label :pubdate %><br >
+  <%= f.text_field :pubdate %>
+</div>
+<div clas="action">
+  <%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to 'Back', question_index_path %></p>
+

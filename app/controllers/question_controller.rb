@@ -13,5 +13,21 @@ class QuestionController < ApplicationController
     redirect_to (:action => "index")
   end
 
-  
+  def modify
+    @question = Question.find(params[:id])
+  end
+
+  def updateing
+    @question = Question.find(params[:id])
+    @question.update_attributes(params[:question])
+
+    redirect_to (:action => "index")
+  end
+
+  def del
+    @question = Question.find(params[:id])
+    @question.destroy
+
+    redirect_to (:action => "index")
+  end
 end
