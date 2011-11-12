@@ -21,3 +21,34 @@
 </p>
 
 <%= link_to 'Back', question_index_path %>
+
+<h2>Answers</h2>
+<% @question.answers.each do |answer| %>
+<p>
+	<b>Commenter:</b>
+	<%= answer.commenter %>
+</p>
+
+<p>
+	<b>Body:</b>
+	<%= answer.body %>
+</p>
+<% end %>
+
+
+<h2>Add an Answer:</h2>
+<%= form_for([@question, @question.answers.build]) do |f| %>
+
+  <div class="field">
+    <%= f.label :commenter %><br />
+    <%= f.text_field :commenter %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
